@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DEV_PORTFOLIO_V1.0 | Projects Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#26ed26",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#0a0a0c",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0a0a0c;
+            background-image: 
+                linear-gradient(rgba(38, 237, 38, 0.03) 1px, transparent 1px),
+                linear-gradient(90px, rgba(38, 237, 38, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(38, 237, 38, 0.4);
+        }
+        .neon-border {
+            border: 1px solid rgba(38, 237, 38, 0.3);
+        }
+        .neon-border:hover {
+            border: 1px solid #26ed26;
+            box-shadow: 0 0 10px rgba(38, 237, 38, 0.2);
+        }
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(38, 237, 38, 0.1);
+            position: absolute;
+            z-index: 10;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="font-display text-slate-100 selection:bg-primary selection:text-background-dark">
+<!-- Fixed Navigation Bar -->
+<nav class="fixed top-0 left-0 w-full z-50 border-b border-primary/20 bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+<span class="font-bold tracking-tighter text-xl">DEV_PORTFOLIO_V1.0</span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors tracking-widest uppercase" href="#">Archive</a>
+<a class="text-sm font-medium hover:text-primary transition-colors tracking-widest uppercase" href="#">Labs</a>
+<a class="text-sm font-medium hover:text-primary transition-colors tracking-widest uppercase" href="#">Status</a>
+<a class="text-sm font-medium hover:text-primary transition-colors tracking-widest uppercase" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-background-dark px-4 py-2 font-bold text-xs rounded hover:brightness-110 transition-all neon-glow flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">download</span>
+                    RESUME.PDF
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<div class="mb-16 border-l-4 border-primary pl-6">
+<h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-2">PROJ_01: ARCHIVE</h1>
+<div class="flex items-center gap-4 text-primary/60 font-mono text-sm tracking-[0.2em]">
+<span>DEPLOYED_SYSTEMS_GRID_VIEW.EXE</span>
+<span class="h-px flex-1 bg-primary/20"></span>
+<span class="text-primary flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                    SYSTEM_ACTIVE
+                </span>
+</div>
+</div>
+<!-- Filter Bar -->
+<div class="mb-12 flex flex-wrap gap-4 border-b border-primary/10 pb-6">
+<button class="px-6 py-2 border border-primary bg-primary text-background-dark font-bold text-xs tracking-widest rounded-sm">ALL_PROJECTS</button>
+<button class="px-6 py-2 border border-primary/30 text-primary/60 hover:text-primary hover:border-primary font-bold text-xs tracking-widest rounded-sm transition-all">WEB_APPS</button>
+<button class="px-6 py-2 border border-primary/30 text-primary/60 hover:text-primary hover:border-primary font-bold text-xs tracking-widest rounded-sm transition-all">DESKTOP_UI</button>
+<button class="px-6 py-2 border border-primary/30 text-primary/60 hover:text-primary hover:border-primary font-bold text-xs tracking-widest rounded-sm transition-all">BLOCKCHAIN</button>
+</div>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project Card 1 -->
+<div class="group relative bg-primary/5 neon-border p-1 rounded-sm overflow-hidden flex flex-col">
+<div class="relative aspect-video overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100" data-alt="Luxury black sports car in a neon lit futuristic garage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEFUUrRdzu7r_vTyfOnUywMMHUmWYHwd1OhVRr49NVBbe8i2H9s6y7LaJBPz4wLm1OxIfslaQCgJwXPjmUeftJYLsEtHOUevZpOhqSCZkMzDCWF4m4eZyMm8wGnRLIWDR9P3nAuKqwnOrb_cbPU3dRvd5hXKVCtDFqo9Yrc0BQo5nS96AD0W5h7svpJnv7xfbWgAKtj40MwPjHd6BRy9I9YuRzgoC0mnUoVa85Ilnlbu17CJGPy1UPAKnSLsdfWrRO7Zd7K5YhZ0k_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent"></div>
+<div class="absolute top-4 right-4 flex gap-2">
+<span class="bg-background-dark/80 backdrop-blur text-primary border border-primary/30 px-2 py-1 text-[10px] font-bold font-mono uppercase tracking-tighter">React</span>
+<span class="bg-background-dark/80 backdrop-blur text-primary border border-primary/30 px-2 py-1 text-[10px] font-bold font-mono uppercase tracking-tighter">Node.js</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-bold tracking-tight text-primary">Driveway Dreams</h3>
+<span class="text-primary/30 font-mono text-xs">ID: 0042</span>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed mb-8 flex-1">
+                        High-end automotive showcase platform with neon-infused UI and seamless car browsing experience. Built with a custom shader-based image gallery and real-time inventory synchronization.
+                    </p>
+<button class="w-full bg-primary text-background-dark py-3 font-black text-sm tracking-widest uppercase hover:brightness-110 neon-glow flex items-center justify-center gap-2 group/btn">
+<span>View Project</span>
+<span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="group relative bg-primary/5 neon-border p-1 rounded-sm overflow-hidden flex flex-col">
+<div class="relative aspect-video overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100" data-alt="Close up of a motherboard with green server lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5lOer4dy0xGTMUr5GpIF43QuHqywCKcw7QE5Lu6xxTLY2DGafj6dsfx7ry0pW5cnXCDCoASrtzuNu3q2R8pxR3wNQ8UIVrnZ2ewOS25bfUMJjeOhxgmoZ2SWtMMU2bYcBdNf5ASAULBhsOYDcpWoBECiK22qB4-MH3BlmTYFjEVb47U5DCmla9VHGqkDDymFU2ldsyarTbqSVaMWGZKapUX_Tw1myBw5LpFcAbALaNhRFjmMVtTstvt_2eOEpmhkNO0EUoiLK_c84"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent"></div>
+<div class="absolute top-4 right-4 flex gap-2">
+<span class="bg-background-dark/80 backdrop-blur text-primary border border-primary/30 px-2 py-1 text-[10px] font-bold font-mono uppercase tracking-tighter">C#</span>
+<span class="bg-background-dark/80 backdrop-blur text-primary border border-primary/30 px-2 py-1 text-[10px] font-bold font-mono uppercase tracking-tighter">.NET Core</span>
+<span class="bg-background-dark/80 backdrop-blur text-primary border border-primary/30 px-2 py-1 text-[10px] font-bold font-mono uppercase tracking-tighter">WPF</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-bold tracking-tight text-primary">C# Desktop Application</h3>
+<span class="text-primary/30 font-mono text-xs">ID: 0058</span>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed mb-8 flex-1">
+                        Advanced system architecture built with C# and .NET, featuring real-time data processing and custom UI. Includes multi-threaded performance monitoring and encrypted communication modules.
+                    </p>
+<button class="w-full bg-primary text-background-dark py-3 font-black text-sm tracking-widest uppercase hover:brightness-110 neon-glow flex items-center justify-center gap-2 group/btn">
+<span>View Project</span>
+<span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="group relative bg-primary/5 neon-border p-1 rounded-sm overflow-hidden flex flex-col">
+<div class="relative aspect-video overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100" data-alt="Futuristic glowing blue and green circuit board with data flowing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBK7K3m-G7uY_pXfX9xR-8z-7y6_R8X8x-B-y-P-z-D-x-Q-v-R-x-S-y-T-u-V-w-x-y-z"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent"></div>
+<div class="absolute top-4 right-4 flex gap-2">
+<span class="bg-background-dark/80 backdrop-blur text-primary border border-primary/30 px-2 py-1 text-[10px] font-bold font-mono uppercase tracking-tighter">React</span>
+<span class="bg-background-dark/80 backdrop-blur text-primary border border-primary/30 px-2 py-1 text-[10px] font-bold font-mono uppercase tracking-tighter">Solidity</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-bold tracking-tight text-primary">Blockchain Explorer</h3>
+<span class="text-primary/30 font-mono text-xs">ID: 0071</span>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed mb-8 flex-1">
+                        A decentralized ledger visualizer providing real-time transaction monitoring and smart contract interaction. Built for transparency in web3 ecosystems with high-performance indexing.
+                    </p>
+<button class="w-full bg-primary text-background-dark py-3 font-black text-sm tracking-widest uppercase hover:brightness-110 neon-glow flex items-center justify-center gap-2 group/btn">
+<span>View Project</span>
+<span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Project Card 4 -->
+<div class="group relative bg-primary/5 neon-border p-1 rounded-sm overflow-hidden flex flex-col">
+<div class="relative aspect-video overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100" data-alt="High-tech weather dashboard with dark blue and green radar maps" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9y-L-M-N-O-P-Q-R-S-T-U-V-W-X-Y-Z-0-1-2-3-4-5-6-7-8-9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent"></div>
+<div class="absolute top-4 right-4 flex gap-2">
+<span class="bg-background-dark/80 backdrop-blur text-primary border border-primary/30 px-2 py-1 text-[10px] font-bold font-mono uppercase tracking-tighter">React</span>
+<span class="bg-background-dark/80 backdrop-blur text-primary border border-primary/30 px-2 py-1 text-[10px] font-bold font-mono uppercase tracking-tighter">SVG</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-bold tracking-tight text-primary">Weather API Dashboard</h3>
+<span class="text-primary/30 font-mono text-xs">ID: 0084</span>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed mb-8 flex-1">
+                        Real-time weather tracking application featuring dynamic SVG animations and hyper-local forecasts via Dark Sky API integration. Optimized for low-latency updates and visual clarity.
+                    </p>
+<button class="w-full bg-primary text-background-dark py-3 font-black text-sm tracking-widest uppercase hover:brightness-110 neon-glow flex items-center justify-center gap-2 group/btn">
+<span>View Project</span>
+<span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div></div>
+<!-- Pagination/Navigation -->
+<div class="mt-20 flex justify-center items-center gap-4">
+<button class="size-10 flex items-center justify-center border border-primary/30 text-primary/30 rounded-sm hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex gap-2">
+<span class="size-10 flex items-center justify-center border border-primary bg-primary text-background-dark font-bold rounded-sm">01</span>
+<span class="size-10 flex items-center justify-center border border-primary/30 text-primary/60 font-bold rounded-sm hover:border-primary hover:text-primary cursor-pointer transition-all">02</span>
+<span class="size-10 flex items-center justify-center border border-primary/30 text-primary/60 font-bold rounded-sm hover:border-primary hover:text-primary cursor-pointer transition-all">03</span>
+</div>
+<button class="size-10 flex items-center justify-center border border-primary/30 text-primary/30 rounded-sm hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="border-t border-primary/20 bg-background-dark py-12 px-6">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-2xl">sensors</span>
+<div class="flex flex-col">
+<span class="text-[10px] font-mono text-primary/40 uppercase">System Status</span>
+<span class="text-xs font-mono text-primary">OPERATIONAL_ALL_NODES_STABLE</span>
+</div>
+</div>
+<div class="text-xs font-mono text-slate-500 uppercase tracking-widest">
+                © 2024 DEPLOY_LOG: <span class="text-primary">PORTFOLIO_V1.0.42</span>
+</div>
+<div class="flex gap-6">
+<a class="text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">hub</span>
+</a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>

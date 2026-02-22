@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--
+    Dev_Protocol | Projects Archive
+    Author  : Janith Charuka
+    Purpose : Showcases deployed projects with filter functionality.
+    Security: Filter logic uses dataset attributes only — no eval(), innerHTML,
+              or unescaped user input. All external project links use
+              rel="noopener noreferrer" to prevent tabnapping.
+-->
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- Security: Restrict referrer info sent to external sites -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <!-- Security: Prevent MIME-type sniffing -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <!-- Responsive: Correct viewport scaling -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- SEO: Page title -->
+    <title>Projects Archive | Dev_Protocol</title>
+    <!-- SEO: Description for crawlers -->
+    <meta name="description"
+        content="Projects by Janith Charuka — LMS System, Driveway Dreams, and more. Built with C#, WAMP, SQL and modern web tech." />
+
+    <!-- External: Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Local: Custom Sleek Neon theme -->
+    <link href="style.css" rel="stylesheet" />
+    <!-- External: Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#26ed26",
+                        "background-dark": "#0a0a0c",
+                        "surface-dark": "#111114",
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-dark text-slate-100 antialiased overflow-x-hidden selection:bg-primary selection:text-background-dark">
+
+    <!-- Shared Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-background-dark/80 backdrop-blur-md border-b border-primary/30 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <div class="flex items-center gap-2 group cursor-pointer" onclick="window.location.href='index.html'">
+                <span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+                <span class="text-xl font-bold tracking-tighter text-slate-100 uppercase italic">Dev_Protocol</span>
+            </div>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="education.html">Education</a>
+                <a class="nav-link active" href="projects.html">Projects</a>
+                <a class="nav-link" href="skills.html">Skills</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </div>
+            <a href="https://wa.me/94721450572?text=Hello%20Janith,%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20working%20with%20you!"
+                target="_blank" rel="noopener noreferrer"
+                class="bg-primary hover:bg-primary/90 text-background-dark px-6 py-2 text-xs font-bold uppercase tracking-tighter rounded-sm transition-all active:scale-95 neon-border inline-block">
+                Hire Me
+            </a>
+        </div>
+    </nav>
+
+    <!-- MAIN SECTION: PROJECT GALLERY 
+         A grid-based showcase of deployed systems and applications.
+    -->
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto grid-bg">
+        <!-- Gallery Header -->
+        <div class="mb-16 border-l-4 border-primary pl-6">
+            <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-2 uppercase">Proj_Archive</h1>
+            <div class="flex items-center gap-4 text-primary/60 font-mono text-sm tracking-[0.2em]">
+                <span>DEPLOYED_SYSTEMS_GRID_VIEW.EXE</span>
+                <span class="h-px flex-1 bg-primary/20"></span>
+                <span class="text-primary flex items-center gap-2">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                    </span>
+                    SYSTEM_ACTIVE
+                </span>
+            </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div id="filter-bar" class="mb-12 flex flex-wrap gap-4 border-b border-primary/10 pb-6">
+            <button data-filter="all"
+                class="filter-btn active-filter px-6 py-2 border border-primary bg-primary text-background-dark font-bold text-xs tracking-widest rounded-sm transition-all">ALL_PROJECTS</button>
+            <button data-filter="web"
+                class="filter-btn px-6 py-2 border border-primary/30 text-primary/60 hover:text-primary hover:border-primary font-bold text-xs tracking-widest rounded-sm transition-all">WEB_APPS</button>
+            <button data-filter="blockchain"
+                class="filter-btn px-6 py-2 border border-primary/30 text-primary/60 hover:text-primary hover:border-primary font-bold text-xs tracking-widest rounded-sm transition-all">BLOCKCHAIN</button>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- PROJECT: LMS System for Campus -->
+            <div data-category="web"
+                class="project-card group relative bg-primary/5 p-1 rounded-sm overflow-hidden flex flex-col neon-border cyber-card">
+                <!-- Project Visual -->
+                <div class="relative aspect-video overflow-hidden">
+                    <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100"
+                        src="lms_preview.png" alt="LMS System preview">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent">
+                    </div>
+                </div>
+                <!-- Project Details -->
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold tracking-tight text-primary">LMS System for Campus</h3>
+                        <span class="text-primary/30 font-mono text-xs">ID: 0062</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8 flex-1">
+                        Full‑stack Learning Management System built for campus use. Front‑end and back‑end developed
+                        with WAMP stack and SQL database integration.
+                    </p>
+                    <a href="#"
+                        class="w-full bg-primary text-background-dark py-3 font-black text-sm tracking-widest uppercase hover:brightness-110 neon-border flex items-center justify-center gap-2 group/btn">
+                        <span>View Project</span>
+                        <span
+                            class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- PROJECT: Driveway Dreams -->
+            <div data-category="web"
+                class="project-card group relative bg-primary/5 p-1 rounded-sm overflow-hidden flex flex-col neon-border cyber-card">
+                <!-- Project Visual -->
+                <div class="relative aspect-video overflow-hidden">
+                    <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEFUUrRdzu7r_vTyfOnUywMMHUmWYHwd1OhVRr49NVBbe8i2H9s6y7LaJBPz4wLm1OxIfslaQCgJwXPjmUeftJYLsEtHOUevZpOhqSCZkMzDCWF4m4eZyMm8wGnRLIWDR9P3nAuKqwnOrb_cbPU3dRvd5hXKVCtDFqo9Yrc0BQo5nS96AD0W5h7svpJnv7xfbWgAKtj40MwPjHd6BRy9I9YuRzgoC0mnUoVa85Ilnlbu17CJGPy1UPAKnSLsdfWrRO7Zd7K5YhZ0k_"
+                        alt="Automotive project visual">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent">
+                    </div>
+                </div>
+                <!-- Project Details -->
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold tracking-tight text-primary">Driveway Dreams</h3>
+                        <span class="text-primary/30 font-mono text-xs">ID: 0042</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8 flex-1">
+                        High-end automotive showcase platform with neon-infused UI and seamless browsing. Developed with
+                        a focus on visual performance and responsive design.
+                    </p>
+                    <a href="https://car-website-sandy.vercel.app?_vercel_share=2yRL7JgbSQ9nXTsDZGgTbsQ1dzsu8BfE"
+                        target="_blank" rel="noopener noreferrer"
+                        class="w-full bg-primary text-background-dark py-3 font-black text-sm tracking-widest uppercase hover:brightness-110 neon-border flex items-center justify-center gap-2 group/btn">
+                        <span>View Project</span>
+                        <span
+                            class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- PROJECT: System Architecture -->
+            <div data-category="blockchain"
+                class="project-card group relative bg-primary/5 p-1 rounded-sm overflow-hidden flex flex-col neon-border cyber-card">
+                <!-- Project Visual -->
+                <div class="relative aspect-video overflow-hidden">
+                    <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5lOer4dy0xGTMUr5GpIF43QuHqywCKcw7QE5Lu6xxTLY2DGafj6dsfx7ry0pW5cnXCDCoASrtzuNu3q2R8pxR3wNQ8UIVrnZ2ewOS25bfUMJjeOhxgmoZ2SWtMMU2bYcBdNf5ASAULBhsOYDcpWoBECiK22qB4-MH3BlmTYFjEVb47U5DCmla9VHGqkDDymFU2ldsyarTbqSVaMWGZKapUX_Tw1myBw5LpFcAbALaNhRFjmMVtTstvt_2eOEpmhkNO0EUoiLK_c84"
+                        alt="Backend architecture visual">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent">
+                    </div>
+                </div>
+                <!-- Project Details -->
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold tracking-tight text-primary">System Architecture</h3>
+                        <span class="text-primary/30 font-mono text-xs">ID: 0058</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8 flex-1">
+                        Advanced backend services built with C# and .NET Core for distributed data processing.
+                        Implements high-availability patterns and secure communication.
+                    </p>
+                    <button
+                        class="w-full bg-primary text-background-dark py-3 font-black text-sm tracking-widest uppercase hover:brightness-110 neon-border flex items-center justify-center gap-2 group/btn">
+                        <span>View Project</span>
+                        <span
+                            class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-background-dark py-12 border-t border-slate-900 mt-20">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-slate-500 text-xs font-mono mb-4">SYSTEM_FOOTER // VERSION 1.0.4</p>
+            <p class="text-slate-400 text-sm">© 2024 Dev_Protocol. All Rights Reserved. Stay creative.</p>
+        </div>
+    </footer>
+    <script>
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button styles
+                filterBtns.forEach(b => {
+                    b.classList.remove('active-filter', 'bg-primary', 'text-background-dark', 'border-primary');
+                    b.classList.add('text-primary/60', 'border-primary/30');
+                });
+                btn.classList.add('active-filter', 'bg-primary', 'text-background-dark', 'border-primary');
+                btn.classList.remove('text-primary/60', 'border-primary/30');
+
+                const filter = btn.dataset.filter;
+
+                cards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--
+    Dev_Protocol | Portfolio Homepage
+    Author  : Janith Charuka
+    Purpose : Main entry point. Showcases identity, hero CTA, and navigation.
+    Security: All external links use rel="noopener noreferrer".
+              CDN resources are loaded from trusted providers only.
+              No user input is processed on this page.
+-->
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- Security: Restrict referrer info sent to external sites -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <!-- Security: Prevent MIME-type sniffing (effective when served over HTTP) -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <!-- Security: Proper mobile scaling - prevents zoom exploits on mobile -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- SEO: Descriptive page title -->
+    <title>Dev_Protocol | Home</title>
+    <!-- SEO: Page description for search engines -->
+    <meta name="description"
+        content="Portfolio of Janith Charuka - Undergraduate Software Developer & Engineering Tech Enthusiast." />
+
+    <!-- External Resources: Tailwind CSS via CDN (trusted source) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Local Stylesheet: Custom theme overrides -->
+    <link href="style.css" rel="stylesheet" />
+    <!-- Google Fonts: Material Symbols icon library -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind Configuration: Customizing the theme for Cyberpunk aesthetic -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#26ed26",
+                        "background-dark": "#0a0a0c",
+                        "surface-dark": "#111114",
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-dark text-slate-100 antialiased overflow-x-hidden">
+
+    <!-- SECTION: SHARED NAVIGATION 
+         Fixed top bar with backdrop blur for a futuristic feel.
+    -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-background-dark/80 backdrop-blur-md border-b border-primary/30 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <!-- Branding -->
+            <div class="flex items-center gap-2 group cursor-pointer" onclick="window.location.href='index.html'">
+                <span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+                <span class="text-xl font-bold tracking-tighter text-slate-100 uppercase italic">Dev_Protocol</span>
+            </div>
+            <!-- Navigation Links -->
+            <div class="hidden md:flex items-center gap-10">
+                <a class="nav-link active" href="index.html">Home</a>
+                <a class="nav-link" href="education.html">Education</a>
+                <a class="nav-link" href="projects.html">Projects</a>
+                <a class="nav-link" href="skills.html">Skills</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </div>
+            <!-- Primary Action -->
+            <a href="https://wa.me/94721450572?text=Hello%20Janith,%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20working%20with%20you!"
+                target="_blank" rel="noopener noreferrer"
+                class="bg-primary hover:bg-primary/90 text-background-dark px-6 py-2 text-xs font-bold uppercase tracking-tighter rounded-sm transition-all active:scale-95 neon-border inline-block">
+                Hire Me
+            </a>
+        </div>
+    </nav>
+
+    <!-- SECTION: HERO
+         Main landing section with animated backgrounds and primary bio.
+    -->
+    <main class="relative min-h-screen flex items-center pt-20 overflow-hidden grid-bg">
+        <!-- Visual Accents: Glowing blur circles -->
+        <div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-[100px]"></div>
+
+        <div class="max-w-7xl mx-auto px-6 w-full py-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content Box -->
+                <div class="z-10 order-2 lg:order-1">
+                    <!-- Availability Pill -->
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 mb-6">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                        </span>
+                        <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-primary">Available for new
+                            projects</span>
+                    </div>
+
+                    <h2 class="text-primary text-lg md:text-xl font-medium tracking-[0.3em] uppercase mb-2 neon-text">
+                        System_Operator
+                    </h2>
+
+                    <!-- Identity Section with Photo Alignment -->
+                    <div class="flex flex-col md:flex-row md:items-center gap-8 mb-4">
+                        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter leading-none">
+                            JANITH CHARUKA<span class="text-primary">_</span>
+                        </h1>
+                        <!-- Profile Image: Framed with neon borders -->
+                        <div class="relative w-32 h-32 md:w-40 md:h-40 shrink-0">
+                            <div class="absolute -inset-1 bg-primary/50 blur opacity-30 rounded-lg"></div>
+                            <div
+                                class="relative w-full h-full rounded-lg border-2 border-primary overflow-hidden neon-border">
+                                <img src="user_profile.jpg" alt="Profile of Janith Charuka"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="h-px w-8 bg-primary/40"></div>
+                        <p class="text-primary text-xs md:text-sm font-bold uppercase tracking-[0.3em]">
+                            Undergraduate Software Developer & Engineering Tech Enthusiast
+                        </p>
+                    </div>
+
+                    <p class="text-slate-400 text-lg max-w-2xl mb-10 leading-relaxed font-light">
+                        Building futuristic digital experiences with a cyberpunk edge. Specialized in creating scalable,
+                        high-performance web applications and sleek user interfaces.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-wrap gap-4">
+                        <a href="projects.html"
+                            class="bg-primary hover:bg-primary/80 text-background-dark px-8 py-4 text-sm font-bold uppercase tracking-widest rounded transition-all flex items-center gap-2 group neon-border">
+                            View My Work
+                            <span
+                                class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </a>
+                        <button
+                            class="border border-slate-700 hover:border-primary/50 hover:bg-primary/5 text-white px-8 py-4 text-sm font-bold uppercase tracking-widest rounded transition-all flex items-center gap-2">
+                            Download CV
+                            <span class="material-symbols-outlined text-sm">download</span>
+                        </button>
+                    </div>
+
+                    <!-- Tech Stack Icons -->
+                    <div class="mt-12 flex items-center gap-6">
+                        <div class="flex -space-x-3">
+                            <div
+                                class="w-10 h-10 rounded-full border-2 border-background-dark bg-slate-800 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-xs text-primary">code</span>
+                            </div>
+                            <div
+                                class="w-10 h-10 rounded-full border-2 border-background-dark bg-slate-800 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-xs text-primary">database</span>
+                            </div>
+                            <div
+                                class="w-10 h-10 rounded-full border-2 border-background-dark bg-slate-800 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-xs text-primary">cloud</span>
+                            </div>
+                        </div>
+                        <p class="text-xs uppercase tracking-widest text-slate-500 font-bold italic">
+                            Full Stack Enthusiast
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Hero Visual: Terminal Interface Backdrop -->
+                <div class="relative order-1 lg:order-2 flex justify-center lg:justify-end hidden lg:flex">
+                    <div
+                        class="relative w-full max-w-md aspect-square bg-slate-900 border border-primary/20 rounded-xl overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent"></div>
+                        <img alt="Cyberpunk workspace visual"
+                            class="w-full h-full object-cover mix-blend-overlay opacity-60 grayscale group-hover:grayscale-0 transition-all duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCppir6MIG4Hcx-GVte-17ySCYLECCcALBGJO4eVMb1pdrIA7nheqki3PJtczawpq3YoYAeIAp2-aBREZR7Bnw0vvg3p2A8VHLEnK2Iegr6YebSKOt_YTC5b2bWVNmqxkQPtLwCp9Da_VL2zX_2pUZjS4kOfb8dxDxUpk2SggKPPnqw0UBib5kgsaeQAw3wv4EYDYj24tJ2eF9HrGwo6qr243lhCN8IdHRSIn5Ms9Zl9XvF1RBcC0oL53o0WUdgYXtiX8kaFVvHMGUz" />
+
+                        <!-- Mini Terminal Overlay -->
+                        <div
+                            class="absolute bottom-6 left-6 right-6 p-4 bg-background-dark/90 border border-primary/40 rounded-lg backdrop-blur-md">
+                            <div class="flex items-center gap-1.5 mb-3">
+                                <div class="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-green-500/50"></div>
+                            </div>
+                            <div class="space-y-2 font-mono text-xs">
+                                <p class="text-primary"><span class="text-slate-500">&gt;</span> npm init portfolio</p>
+                                <p class="text-blue-400">Loading components...</p>
+                                <p class="text-slate-300">Building UI with <span class="text-primary">Cyber_Core
+                                        v2.0</span></p>
+                                <p class="text-primary animate-pulse">_</p>
+                            </div>
+                        </div>
+                        <div class="scanline"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- SECTION: FOOTER -->
+    <footer class="bg-background-dark py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-slate-500 text-xs font-mono mb-4">SYSTEM_FOOTER // VERSION 1.0.4</p>
+            <p class="text-slate-400 text-sm">© 2024 Dev_Protocol. All Rights Reserved. Stay creative, stay caffeinated.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

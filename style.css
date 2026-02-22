@@ -1,0 +1,129 @@
+/* 
+   CYBER_CORE V2.0 - Sleek Neon Portfolio Design System
+   Consolidated styling for a unified cyberpunk aesthetic.
+*/
+
+/* --- THEME FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* --- DESIGN TOKENS --- */
+:root {
+    --primary: #26ed26;
+    /* Hyper-green primary accent */
+    --background-dark: #0a0a0c;
+    /* Deep space background */
+    --background-light: #f6f8f6;
+    /* Reserved for potential light mode */
+    --surface-dark: #111114;
+    /* Secondary layer background */
+    --slate-400: #94a3b8;
+    /* Subtle text */
+    --slate-500: #64748b;
+    /* Placeholder/Muted text */
+    --slate-900: #0f172a;
+    /* Deep contrast background */
+}
+
+/* --- BASE STYLES --- */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--background-dark);
+    color: white;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/* --- NEON UTILITIES --- */
+/* Creates a subtle glowing border effect */
+.neon-border {
+    border: 1px solid rgba(38, 237, 38, 0.3);
+    box-shadow: 0 0 10px rgba(38, 237, 38, 0.2);
+}
+
+.neon-border:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 15px rgba(38, 237, 38, 0.4);
+}
+
+/* Text glow for headings and emphasized elements */
+.neon-text {
+    text-shadow: 0 0 8px rgba(38, 237, 38, 0.5);
+}
+
+/* --- BACKGROUND ELEMENTS --- */
+/* Cyberpunk grid background pattern */
+.grid-bg {
+    background-image: linear-gradient(to right, rgba(38, 237, 38, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(38, 237, 38, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Moving scanline decorative element */
+.scanline {
+    width: 100%;
+    height: 2px;
+    background: rgba(38, 237, 38, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    animation: scan 3s linear infinite;
+}
+
+@keyframes scan {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+/* --- NAVIGATION COMPONENT --- */
+.nav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--slate-400);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary);
+}
+
+/* --- CARD COMPONENTS --- */
+/* Glassmorphism card effect */
+.cyber-card {
+    background: rgba(17, 17, 20, 0.8);
+    border: 1px solid rgba(38, 237, 38, 0.1);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.cyber-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 20px rgba(38, 237, 38, 0.2);
+}
+
+/* --- SCROLLBAR CUSTOMIZATION --- */
+/* Webkit based scrollbar styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(38, 237, 26, 0.2);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}

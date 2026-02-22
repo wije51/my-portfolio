@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!--
+    Dev_Protocol | Academic Trajectory Page
+    Author  : Janith Charuka
+    Purpose : Displays educational background — Undergraduate, Diploma (IMBS),
+              A/L (Engineering Technology), O/L results, and key academic modules.
+    Security: All external CDN resources are from trusted providers.
+              No user input is collected on this page.
+              All external links use rel="noopener noreferrer".
+-->
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- Security: Restrict referrer data sent to third parties -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <!-- Security: Prevent MIME-type sniffing -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <!-- Responsive: Correct scaling across screen sizes -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- SEO: Page title -->
+    <title>Academic Logs | Dev_Protocol</title>
+    <!-- SEO: Description for search crawlers -->
+    <meta name="description"
+        content="Educational background of Janith Charuka — Diploma in IT (IMBS Campus), A/L Engineering Technology, and G.C.E O/L results." />
+
+    <!-- External: Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Local: Custom Sleek Neon theme styles -->
+    <link href="style.css" rel="stylesheet" />
+    <!-- External: Google Material Symbols icon font -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <!-- Theme Definition -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#26ed26",
+                        "background-dark": "#0a0a0c",
+                        "surface-dark": "#111114",
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-dark text-slate-100 antialiased overflow-x-hidden selection:bg-primary selection:text-background-dark">
+
+    <!-- Shared Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-background-dark/80 backdrop-blur-md border-b border-primary/30 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <div class="flex items-center gap-2 group cursor-pointer" onclick="window.location.href='index.html'">
+                <span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+                <span class="text-xl font-bold tracking-tighter text-slate-100 uppercase italic">Dev_Protocol</span>
+            </div>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" href="education.html">Education</a>
+                <a class="nav-link" href="projects.html">Projects</a>
+                <a class="nav-link" href="skills.html">Skills</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </div>
+            <a href="https://wa.me/94721450572?text=Hello%20Janith,%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20working%20with%20you!"
+                target="_blank" rel="noopener noreferrer"
+                class="bg-primary hover:bg-primary/90 text-background-dark px-6 py-2 text-xs font-bold uppercase tracking-tighter rounded-sm transition-all active:scale-95 neon-border inline-block">
+                Hire Me
+            </a>
+        </div>
+    </nav>
+
+    <!-- MAIN SECTION: EDUCATION
+         Showcasing the Diploma in IT from IMBS Campus.
+    -->
+    <main class="relative pt-32 pb-20 px-6 min-h-screen grid-bg">
+        <div class="absolute top-0 right-0 w-1/3 h-1/2 bg-primary/5 blur-[120px] rounded-full -z-10"></div>
+
+        <div class="max-w-6xl mx-auto">
+            <!-- Header -->
+            <header class="mb-16">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded border border-primary/30 bg-primary/10 mb-4">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                    </span>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">System.Status:
+                        Online</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tighter uppercase">
+                    Academic_<span class="text-primary italic">Trajectory</span>
+                </h1>
+                <p class="max-w-2xl text-slate-400 text-lg leading-relaxed font-light">
+                    Accessing archived educational databases. Found entries regarding foundational IT systems and
+                    software engineering methodologies at <span class="text-primary font-medium">IMBS Campus</span>.
+                </p>
+            </header>
+
+            <!-- CURRENT STATUS: UNDERGRADUATE -->
+            <div class="mb-12">
+                <div
+                    class="relative bg-primary/10 border border-primary p-6 rounded-sm flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden">
+                    <div class="absolute -left-4 -top-4 w-24 h-24 bg-primary/20 blur-3xl rounded-full"></div>
+                    <div class="relative flex items-center gap-6">
+                        <div
+                            class="w-16 h-16 bg-primary/20 flex items-center justify-center border border-primary shrink-0">
+                            <span class="material-symbols-outlined text-primary text-4xl">history_edu</span>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-primary uppercase tracking-[0.4em] mb-1 block">Current_Phase</span>
+                            <h2 class="text-2xl md:text-3xl font-black text-white uppercase tracking-tight">
+                                Undergraduate Degree</h2>
+                            <p class="text-slate-400 text-sm italic font-light mt-1">Pursuing Higher Studies in IT &
+                                Engineering</p>
+                        </div>
+                    </div>
+                    <div class="relative text-center md:text-right">
+                        <div
+                            class="px-4 py-2 bg-primary text-background-dark text-xs font-black uppercase tracking-widest rounded shadow-[0_0_15px_#26ed26]">
+                            In_Progress_...
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Education Card: IMBS Campus -->
+            <div
+                class="relative bg-surface-dark border border-primary/30 p-8 md:p-12 rounded-sm neon-border overflow-hidden cyber-card mb-20">
+                <div class="scanline"></div>
+
+                <!-- Card Header -->
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
+                    <div>
+                        <span class="text-xs font-bold text-primary tracking-[0.4em] uppercase mb-2 block">Primary
+                            Certification</span>
+                        <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight uppercase">Diploma In IT
+                        </h2>
+                        <div class="flex items-center gap-3 mt-2">
+                            <span class="material-symbols-outlined text-primary">school</span>
+                            <p class="text-xl text-slate-300">IMBS Campus</p>
+                        </div>
+                    </div>
+                    <div class="text-left md:text-right">
+                        <div
+                            class="inline-block px-4 py-1 border border-primary/50 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest rounded-full mb-2">
+                            Completed // Status: Graduated
+                        </div>
+                        <p class="text-slate-500 font-mono text-sm">ARCHIVE_REF: 2024_IMBS_LOG</p>
+                    </div>
+                </div>
+
+                <!-- Syllabus Modules Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- MODULE BLOCK: Software Development -->
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3 pb-2 border-b border-primary/20">
+                            <span class="material-symbols-outlined text-primary">code</span>
+                            <h3 class="font-bold text-white uppercase tracking-tighter">Software Development</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 group">
+                                <div
+                                    class="w-1.5 h-1.5 rounded-full bg-primary group-hover:shadow-[0_0_8px_#26ed26] transition-all">
+                                </div>
+                                <span class="text-slate-400 text-sm group-hover:text-white transition-colors">C#
+                                    Programming</span>
+                            </li>
+                            <li class="flex items-center gap-3 group">
+                                <div
+                                    class="w-1.5 h-1.5 rounded-full bg-primary group-hover:shadow-[0_0_8px_#26ed26] transition-all">
+                                </div>
+                                <span class="text-slate-400 text-sm group-hover:text-white transition-colors">Python
+                                    Development</span>
+                            </li>
+                            <li class="flex items-center gap-3 group">
+                                <div
+                                    class="w-1.5 h-1.5 rounded-full bg-primary group-hover:shadow-[0_0_8px_#26ed26] transition-all">
+                                </div>
+                                <span class="text-slate-400 text-sm group-hover:text-white transition-colors">Software
+                                    Engineering</span>
+                            </li>
+                            <li class="flex items-center gap-3 group">
+                                <div
+                                    class="w-1.5 h-1.5 rounded-full bg-primary group-hover:shadow-[0_0_8px_#26ed26] transition-all">
+                                </div>
+                                <span class="text-slate-400 text-sm group-hover:text-white transition-colors">Artificial
+                                    Intelligence</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- MODULE BLOCK: Systems & Networking -->
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3 pb-2 border-b border-primary/20">
+                            <span class="material-symbols-outlined text-primary">lan</span>
+                            <h3 class="font-bold text-white uppercase tracking-tighter">Systems & Networking</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 group">
+                                <div
+                                    class="w-1.5 h-1.5 rounded-full bg-primary group-hover:shadow-[0_0_8px_#26ed26] transition-all">
+                                </div>
+                                <span class="text-slate-400 text-sm group-hover:text-white transition-colors">Internet
+                                    of Things (IoT)</span>
+                            </li>
+                            <li class="flex items-center gap-3 group">
+                                <div
+                                    class="w-1.5 h-1.5 rounded-full bg-primary group-hover:shadow-[0_0_8px_#26ed26] transition-all">
+                                </div>
+                                <span class="text-slate-400 text-sm group-hover:text-white transition-colors">Networking
+                                    & Cyber Security</span>
+                            </li>
+                            <li class="flex items-center gap-3 group">
+                                <div
+                                    class="w-1.5 h-1.5 rounded-full bg-primary group-hover:shadow-[0_0_8px_#26ed26] transition-all">
+                                </div>
+                                <span class="text-slate-400 text-sm group-hover:text-white transition-colors">Hardware
+                                    Engineering</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- MODULE BLOCK: Web & Data -->
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3 pb-2 border-b border-primary/20">
+                            <span class="material-symbols-outlined text-primary">data_object</span>
+                            <h3 class="font-bold text-white uppercase tracking-tighter">Web & Data</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 group">
+                                <div
+                                    class="w-1.5 h-1.5 rounded-full bg-primary group-hover:shadow-[0_0_8px_#26ed26] transition-all">
+                                </div>
+                                <span class="text-slate-400 text-sm group-hover:text-white transition-colors">Web App
+                                    Development</span>
+                            </li>
+                            <li class="flex items-center gap-3 group">
+                                <div
+                                    class="w-1.5 h-1.5 rounded-full bg-primary group-hover:shadow-[0_0_8px_#26ed26] transition-all">
+                                </div>
+                                <span class="text-slate-400 text-sm group-hover:text-white transition-colors">Database
+                                    Management</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION: PREVIOUS EDUCATION & CERTS -->
+            <section>
+                <div class="flex items-center gap-4 mb-10">
+                    <h2 class="text-2xl font-bold text-white tracking-widest uppercase">Other_Archived_Logs</h2>
+                    <div class="h-[1px] flex-grow bg-primary/10"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- A/L Engineering Technology -->
+                    <div
+                        class="bg-surface-dark border-l-2 border-primary/30 p-8 hover:border-primary transition-all cyber-card">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-xl font-bold text-white uppercase mb-1">G.C.E. Advanced Level</h3>
+                                <p class="text-primary text-xs font-bold uppercase tracking-widest">Engineering
+                                    Technology Stream</p>
+                            </div>
+                            <span class="material-symbols-outlined text-primary/40">settings_input_component</span>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 group">
+                                <div
+                                    class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0 group-hover:shadow-[0_0_8px_#26ed26] transition-all">
+                                </div>
+                                <p
+                                    class="text-slate-400 text-sm leading-relaxed group-hover:text-slate-200 transition-colors">
+                                    Developed a strong foundation in <span class="text-primary font-medium">Engineering
+                                        Technology</span>, <span class="text-primary font-medium">ICT</span>, and <span
+                                        class="text-primary font-medium">SFT</span>.
+                                </p>
+                            </li>
+                            <li class="flex items-start gap-3 group">
+                                <div
+                                    class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0 group-hover:shadow-[0_0_8px_#26ed26] transition-all">
+                                </div>
+                                <p
+                                    class="text-slate-400 text-sm leading-relaxed group-hover:text-slate-200 transition-colors">
+                                    Cultivated an analytical and problem-solving mindset, which serves as the backbone
+                                    of my software development approach.
+                                </p>
+                            </li>
+                            <li class="flex items-start gap-3 group">
+                                <div
+                                    class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0 group-hover:shadow-[0_0_8px_#26ed26] transition-all">
+                                </div>
+                                <p
+                                    class="text-slate-400 text-sm leading-relaxed group-hover:text-slate-200 transition-colors">
+                                    Bridged the gap between <span class="text-primary font-medium">physical engineering
+                                        principles</span> and <span class="text-primary font-medium">digital
+                                        logic</span>.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- G.C.E. Ordinary Level -->
+                    <div
+                        class="bg-surface-dark border-l-2 border-primary/30 p-8 hover:border-primary transition-all cyber-card">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-xl font-bold text-white uppercase mb-1">G.C.E. Ordinary Level</h3>
+                                <p class="text-primary text-xs font-bold uppercase tracking-widest">Secondary Education
+                                </p>
+                            </div>
+                            <span class="material-symbols-outlined text-primary/40">menu_book</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Completed the G.C.E. Ordinary Level examination with strong academic results,
+                            demonstrating a solid foundation in both language and mathematics.
+                        </p>
+                        <!-- Subject Results -->
+                        <div class="flex flex-wrap gap-3 mt-2">
+                            <div class="flex items-center gap-2 px-3 py-1.5 border border-primary/20 bg-primary/5">
+                                <span class="material-symbols-outlined text-primary text-sm">translate</span>
+                                <div>
+                                    <p class="text-[10px] text-primary font-bold uppercase tracking-widest">English</p>
+                                    <p class="text-white text-xs font-mono">A Pass</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2 px-3 py-1.5 border border-primary/20 bg-primary/5">
+                                <span class="material-symbols-outlined text-primary text-sm">calculate</span>
+                                <div>
+                                    <p class="text-[10px] text-primary font-bold uppercase tracking-widest">Mathematics
+                                    </p>
+                                    <p class="text-white text-xs font-mono">B Pass</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="bg-primary/5 border border-primary/20 p-8 rounded-sm cyber-card">
+                        <h3 class="text-xl font-bold text-white mb-6 uppercase tracking-widest">Key_Academic_Modules
+                        </h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- Software Engineering -->
+                            <div
+                                class="p-4 border border-primary/20 bg-background-dark/50 hover:border-primary/50 transition-all group">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="material-symbols-outlined text-primary text-base">engineering</span>
+                                    <p class="text-primary font-bold text-[10px] uppercase tracking-widest">Software
+                                        Eng.</p>
+                                </div>
+                                <p
+                                    class="text-slate-400 text-[11px] font-mono leading-snug group-hover:text-white transition-colors">
+                                    SDLC & Software Development Projects</p>
+                            </div>
+                            <!-- Cyber Security -->
+                            <div
+                                class="p-4 border border-primary/20 bg-background-dark/50 hover:border-primary/50 transition-all group">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="material-symbols-outlined text-primary text-base">shield</span>
+                                    <p class="text-primary font-bold text-[10px] uppercase tracking-widest">Cyber
+                                        Security</p>
+                                </div>
+                                <p
+                                    class="text-slate-400 text-[11px] font-mono leading-snug group-hover:text-white transition-colors">
+                                    Networking & Cyber Security Fundamentals</p>
+                            </div>
+                            <!-- AI & ML -->
+                            <div
+                                class="p-4 border border-primary/20 bg-background-dark/50 hover:border-primary/50 transition-all group">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="material-symbols-outlined text-primary text-base">smart_toy</span>
+                                    <p class="text-primary font-bold text-[10px] uppercase tracking-widest">AI & ML</p>
+                                </div>
+                                <p
+                                    class="text-slate-400 text-[11px] font-mono leading-snug group-hover:text-white transition-colors">
+                                    Intro AI & Prompt Engineering</p>
+                            </div>
+                            <!-- Database Systems -->
+                            <div
+                                class="p-4 border border-primary/20 bg-background-dark/50 hover:border-primary/50 transition-all group">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="material-symbols-outlined text-primary text-base">database</span>
+                                    <p class="text-primary font-bold text-[10px] uppercase tracking-widest">Database
+                                        Systems</p>
+                                </div>
+                                <p
+                                    class="text-slate-400 text-[11px] font-mono leading-snug group-hover:text-white transition-colors">
+                                    Database Management & SQL Proficiency</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-background-dark py-12 border-t border-slate-900 mt-20">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-slate-500 text-xs font-mono mb-4">SYSTEM_FOOTER // VERSION 1.0.4</p>
+            <p class="text-slate-400 text-sm">© 2024 Dev_Protocol. All Rights Reserved. Stay focused.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

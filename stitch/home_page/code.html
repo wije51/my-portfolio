@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Software Developer Portfolio | Cyberpunk Edition</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#26ed26",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#0a0a0c",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .neon-border {
+            box-shadow: 0 0 10px rgba(38, 237, 38, 0.3);
+        }
+        .neon-text {
+            text-shadow: 0 0 8px rgba(38, 237, 38, 0.5);
+        }
+        .grid-bg {
+            background-image: linear-gradient(to right, rgba(38, 237, 38, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(38, 237, 38, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<!-- Fixed Navigation Bar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-background-dark/80 backdrop-blur-md border-b border-primary/30 py-4">
+<div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+<div class="flex items-center gap-2 group cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+<span class="text-xl font-bold tracking-tighter text-slate-100 uppercase italic">Dev_Protocol</span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Education</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Projects</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Skills</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Contact</a>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-background-dark px-6 py-2 text-xs font-bold uppercase tracking-tighter rounded-sm transition-all active:scale-95 neon-border">
+                Hire Me
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<main class="relative min-h-screen flex items-center pt-20 overflow-hidden grid-bg">
+<!-- Background decorative elements -->
+<div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-[100px]"></div>
+<div class="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<!-- Hero Content -->
+<div class="z-10 order-2 lg:order-1">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 mb-6">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold text-primary">Available for new projects</span>
+</div>
+<h2 class="text-primary text-lg md:text-xl font-medium tracking-[0.3em] uppercase mb-2 neon-text">
+                    Aspiring Software Developer
+                </h2>
+<h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tighter leading-none">
+                    [YOUR NAME]<span class="text-primary">_</span>
+</h1>
+<p class="text-slate-400 text-lg max-w-lg mb-10 leading-relaxed font-light">
+                    Building futuristic digital experiences with a cyberpunk edge. Specialized in creating scalable, high-performance web applications and sleek user interfaces.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary hover:bg-primary/80 text-background-dark px-8 py-4 text-sm font-bold uppercase tracking-widest rounded transition-all flex items-center gap-2 group neon-border">
+                        View My Work
+                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="border border-slate-700 hover:border-primary/50 hover:bg-primary/5 text-white px-8 py-4 text-sm font-bold uppercase tracking-widest rounded transition-all flex items-center gap-2">
+                        Download CV
+                        <span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+<div class="mt-12 flex items-center gap-6">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-background-dark bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs text-primary">code</span>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-background-dark bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs text-primary">database</span>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-background-dark bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs text-primary">cloud</span>
+</div>
+</div>
+<p class="text-xs uppercase tracking-widest text-slate-500 font-bold italic">
+                        Full Stack Enthusiast
+                    </p>
+</div>
+</div>
+<!-- Hero Visual -->
+<div class="relative order-1 lg:order-2 flex justify-center lg:justify-end">
+<div class="relative w-full max-w-md aspect-square bg-slate-900 border border-primary/20 rounded-xl overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent"></div>
+<img alt="Developer workspace" class="w-full h-full object-cover mix-blend-overlay opacity-60 grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Abstract cyberpunk digital landscape with neon lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCppir6MIG4Hcx-GVte-17ySCYLECCcALBGJO4eVMb1pdrIA7nheqki3PJtczawpq3YoYAeIAp2-aBREZR7Bnw0vvg3p2A8VHLEnK2Iegr6YebSKOt_YTC5b2bWVNmqxkQPtLwCp9Da_VL2zX_2pUZjS4kOfb8dxDxUpk2SggKPPnqw0UBib5kgsaeQAw3wv4EYDYj24tJ2eF9HrGwo6qr243lhCN8IdHRSIn5Ms9Zl9XvF1RBcC0oL53o0WUdgYXtiX8kaFVvHMGUz"/>
+<!-- Terminal UI Overlay -->
+<div class="absolute bottom-6 left-6 right-6 p-4 bg-background-dark/90 border border-primary/40 rounded-lg backdrop-blur-md">
+<div class="flex items-center gap-1.5 mb-3">
+<div class="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-green-500/50"></div>
+</div>
+<div class="space-y-2 font-mono text-[10px] md:text-xs">
+<p class="text-primary"><span class="text-slate-500">&gt;</span> npm init portfolio</p>
+<p class="text-blue-400">Loading components...</p>
+<p class="text-slate-300">Building UI with <span class="text-primary">Cyber_Core v2.0</span></p>
+<p class="text-primary animate-pulse">_</p>
+</div>
+</div>
+<!-- Decorative Scanline -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
+<div class="w-full h-[2px] bg-primary absolute top-0 animate-[scan_3s_linear_infinite]"></div>
+</div>
+</div>
+<!-- Floating Labels -->
+<div class="absolute -top-4 -right-4 bg-background-dark border border-primary/50 p-3 rounded-lg shadow-xl hidden md:block">
+<span class="text-[10px] font-mono text-primary block">STATUS: ONLINE</span>
+<span class="text-[10px] font-mono text-slate-400 block">LOC: EARTH_01</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Featured Skills Preview -->
+<section class="bg-background-dark py-20 border-t border-primary/10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<h3 class="text-primary text-xs font-bold uppercase tracking-[0.4em] mb-4">Tech Stack</h3>
+<h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Core Competencies</h2>
+</div>
+<p class="text-slate-500 max-w-sm text-sm">
+                    Crafting robust solutions using the latest industry standards and cutting-edge technologies.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Frontend -->
+<div class="group p-6 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-primary/40 transition-all">
+<div class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary">data_object</span>
+</div>
+<h4 class="text-white font-bold mb-2">Frontend Dev</h4>
+<p class="text-slate-400 text-sm mb-4">Building responsive and interactive user interfaces.</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-[10px] font-bold text-primary px-2 py-1 bg-primary/10 rounded uppercase">React</span>
+<span class="text-[10px] font-bold text-primary px-2 py-1 bg-primary/10 rounded uppercase">Next.js</span>
+</div>
+</div>
+<!-- Backend -->
+<div class="group p-6 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-primary/40 transition-all">
+<div class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary">settings_ethernet</span>
+</div>
+<h4 class="text-white font-bold mb-2">Backend Ops</h4>
+<p class="text-slate-400 text-sm mb-4">Designing scalable architectures and API systems.</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-[10px] font-bold text-primary px-2 py-1 bg-primary/10 rounded uppercase">Node.js</span>
+<span class="text-[10px] font-bold text-primary px-2 py-1 bg-primary/10 rounded uppercase">Python</span>
+</div>
+</div>
+<!-- Database -->
+<div class="group p-6 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-primary/40 transition-all">
+<div class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary">database</span>
+</div>
+<h4 class="text-white font-bold mb-2">Cloud Systems</h4>
+<p class="text-slate-400 text-sm mb-4">Deploying and managing high-availability clusters.</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-[10px] font-bold text-primary px-2 py-1 bg-primary/10 rounded uppercase">AWS</span>
+<span class="text-[10px] font-bold text-primary px-2 py-1 bg-primary/10 rounded uppercase">Docker</span>
+</div>
+</div>
+<!-- UI/UX -->
+<div class="group p-6 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-primary/40 transition-all">
+<div class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary">palette</span>
+</div>
+<h4 class="text-white font-bold mb-2">Visual Design</h4>
+<p class="text-slate-400 text-sm mb-4">Crafting modern aesthetics with a focus on UX.</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-[10px] font-bold text-primary px-2 py-1 bg-primary/10 rounded uppercase">Figma</span>
+<span class="text-[10px] font-bold text-primary px-2 py-1 bg-primary/10 rounded uppercase">Tailwind</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer CTA -->
+<footer class="bg-background-dark py-12 border-t border-slate-900">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<p class="text-slate-500 text-xs font-mono mb-4">SYSTEM_FOOTER // VERSION 1.0.4</p>
+<p class="text-slate-400 text-sm">© 2024 Dev_Protocol. All Rights Reserved. Stay creative, stay caffeinated.</p>
+</div>
+</footer>
+<style>
+        @keyframes scan {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+    </style>
+</body></html>

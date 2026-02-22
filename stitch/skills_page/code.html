@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skills | Developer Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#26ed26",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#0a0f0a",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    boxShadow: {
+                        'neon': '0 0 10px rgba(38, 237, 38, 0.3)',
+                        'neon-strong': '0 0 20px rgba(38, 237, 38, 0.5)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .cyber-grid {
+            background-image: linear-gradient(rgba(38, 237, 38, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(38, 237, 38, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        .skill-card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(38, 237, 38, 0.2);
+        }
+        .skill-card:hover {
+            border-color: #26ed26;
+            box-shadow: 0 0 15px rgba(38, 237, 38, 0.4);
+            transform: translateY(-2px);
+        }
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(38, 237, 38, 0.1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-slate-100 min-h-screen flex flex-col cyber-grid">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-background-dark/80 backdrop-blur-md border-b border-primary/30">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">terminal</span>
+</div>
+<span class="font-bold tracking-tighter text-xl uppercase">Dev_Terminal<span class="animate-pulse">_</span></span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Projects</a>
+<a class="text-primary text-sm font-bold uppercase tracking-widest border-b-2 border-primary" href="#">Capabilities</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary hover:bg-primary/80 text-background-dark font-bold py-1.5 px-5 rounded-sm transition-all text-xs uppercase tracking-tighter shadow-neon">
+                    Access_CV
+                </button>
+<div class="w-8 h-8 rounded-sm overflow-hidden border border-primary/50">
+<img alt="User Profile" class="w-full h-full object-cover grayscale contrast-125" data-alt="Close up professional portrait of a software engineer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOif42wQPNv0hgSM-rDaB-RehrLTeLcOGLXzh4cgJvKHHP-9Be9nsVWQpppPMfoWzmMfzxOPr1Wgr6oVrczGVeRaw7vjIKyvOe5VuREuZNI9G_xWSMrfWKS6ZuJ1NUL_-LTesXZvhluCPSY7XKEQFhBy2IV40sJ1hyG_AdzdBBMi2HBHQEdKl2XPKY3gLrkOdmwRU_syhgtR6EpIVnChS7BRW3NR5TjzWMkq0G760OFMyPkoGnfG6q3mmcX1gqYK1TiN2Gj7KhYFr7"/>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-20 px-6">
+<div class="max-w-6xl mx-auto">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="text-xs font-bold tracking-[0.3em] uppercase">Security Clearance: Level_04</span>
+<div class="h-[1px] w-12 bg-primary/30"></div>
+</div>
+<h1 class="text-5xl md:text-7xl font-bold tracking-tighter uppercase leading-none">
+                        System_<span class="text-primary">Capabilities</span>
+</h1>
+<p class="text-slate-400 max-w-xl font-light leading-relaxed">
+                        Full-stack proficiency metrics and architectural specialization. Current status: <span class="text-primary font-mono tracking-tighter">OPERATIONAL_STABLE</span>
+</p>
+</div>
+<div class="flex gap-2">
+<button class="bg-primary/10 border border-primary text-primary px-4 py-2 text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:bg-primary hover:text-background-dark transition-all">
+<span class="material-symbols-outlined text-sm">filter_list</span> Filter_Modules
+                    </button>
+</div>
+</div>
+<!-- Skill Categories Tabs -->
+<div class="flex border-b border-primary/20 mb-10 overflow-x-auto no-scrollbar">
+<button class="px-8 py-4 border-b-2 border-primary text-primary text-sm font-bold uppercase tracking-widest whitespace-nowrap">01. All_Modules</button>
+<button class="px-8 py-4 border-b-2 border-transparent text-slate-500 hover:text-primary transition-colors text-sm font-bold uppercase tracking-widest whitespace-nowrap">02. Languages</button>
+<button class="px-8 py-4 border-b-2 border-transparent text-slate-500 hover:text-primary transition-colors text-sm font-bold uppercase tracking-widest whitespace-nowrap">03. Version_Control</button>
+<button class="px-8 py-4 border-b-2 border-transparent text-slate-500 hover:text-primary transition-colors text-sm font-bold uppercase tracking-widest whitespace-nowrap">04. AI_Research</button>
+</div>
+<!-- Skills Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- C# Card -->
+<div class="skill-card bg-background-dark p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-2 text-[10px] text-primary/30 font-mono">0x43_0x53</div>
+<div class="mb-6 flex items-center justify-between">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center border border-primary/30 group-hover:bg-primary/20 group-hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+</div>
+<div class="text-right">
+<div class="text-primary text-xs font-bold uppercase tracking-tighter">Mastery</div>
+<div class="text-xl font-bold">95%</div>
+</div>
+</div>
+<h3 class="text-xl font-bold mb-2 uppercase tracking-tight">C# / .NET</h3>
+<p class="text-slate-400 text-sm mb-6 leading-snug">Backend architecture, high-performance systems, and cloud-native services.</p>
+<div class="w-full bg-primary/10 h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full shadow-neon w-[95%]"></div>
+</div>
+</div>
+<!-- HTML5 Card -->
+<div class="skill-card bg-background-dark p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-2 text-[10px] text-primary/30 font-mono">0x48_0x54</div>
+<div class="mb-6 flex items-center justify-between">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center border border-primary/30 group-hover:bg-primary/20 group-hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-3xl">code</span>
+</div>
+<div class="text-right">
+<div class="text-primary text-xs font-bold uppercase tracking-tighter">Mastery</div>
+<div class="text-xl font-bold">88%</div>
+</div>
+</div>
+<h3 class="text-xl font-bold mb-2 uppercase tracking-tight">HTML5 / UI</h3>
+<p class="text-slate-400 text-sm mb-6 leading-snug">Semantic structures, accessibility standards, and responsive design systems.</p>
+<div class="w-full bg-primary/10 h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full shadow-neon w-[88%]"></div>
+</div>
+</div>
+<!-- GitHub Card -->
+<div class="skill-card bg-background-dark p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-2 text-[10px] text-primary/30 font-mono">0x47_0x49</div>
+<div class="mb-6 flex items-center justify-between">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center border border-primary/30 group-hover:bg-primary/20 group-hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-3xl">account_tree</span>
+</div>
+<div class="text-right">
+<div class="text-primary text-xs font-bold uppercase tracking-tighter">Mastery</div>
+<div class="text-xl font-bold">92%</div>
+</div>
+</div>
+<h3 class="text-xl font-bold mb-2 uppercase tracking-tight">GitHub / Git</h3>
+<p class="text-slate-400 text-sm mb-6 leading-snug">Version control, collaborative workflows, and CI/CD automation pipelines.</p>
+<div class="w-full bg-primary/10 h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full shadow-neon w-[92%]"></div>
+</div>
+</div>
+<!-- AI Dev Tools Card -->
+<div class="skill-card bg-background-dark p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-2 text-[10px] text-primary/30 font-mono">0x41_0x49</div>
+<div class="mb-6 flex items-center justify-between">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center border border-primary/30 group-hover:bg-primary/20 group-hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+</div>
+<div class="text-right">
+<div class="text-primary text-xs font-bold uppercase tracking-tighter">Mastery</div>
+<div class="text-xl font-bold">85%</div>
+</div>
+</div>
+<h3 class="text-xl font-bold mb-2 uppercase tracking-tight">AI_Integrations</h3>
+<p class="text-slate-400 text-sm mb-6 leading-snug">Prompt engineering, LLM implementation, and AI-assisted development tools.</p>
+<div class="w-full bg-primary/10 h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full shadow-neon w-[85%]"></div>
+</div>
+</div>
+<!-- Supplementary Skill: Tailwind -->
+<div class="skill-card bg-background-dark p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-2 text-[10px] text-primary/30 font-mono">0x54_0x57</div>
+<div class="mb-6 flex items-center justify-between">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center border border-primary/30 group-hover:bg-primary/20 group-hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-3xl">palette</span>
+</div>
+<div class="text-right">
+<div class="text-primary text-xs font-bold uppercase tracking-tighter">Mastery</div>
+<div class="text-xl font-bold">90%</div>
+</div>
+</div>
+<h3 class="text-xl font-bold mb-2 uppercase tracking-tight">Tailwind_CSS</h3>
+<p class="text-slate-400 text-sm mb-6 leading-snug">Rapid UI prototyping and scalable utility-first design architectures.</p>
+<div class="w-full bg-primary/10 h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full shadow-neon w-[90%]"></div>
+</div>
+</div>
+<!-- Supplementary Skill: SQL -->
+<div class="skill-card bg-background-dark p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-2 text-[10px] text-primary/30 font-mono">0x53_0x51</div>
+<div class="mb-6 flex items-center justify-between">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center border border-primary/30 group-hover:bg-primary/20 group-hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-3xl">database</span>
+</div>
+<div class="text-right">
+<div class="text-primary text-xs font-bold uppercase tracking-tighter">Mastery</div>
+<div class="text-xl font-bold">82%</div>
+</div>
+</div>
+<h3 class="text-xl font-bold mb-2 uppercase tracking-tight">SQL / Data</h3>
+<p class="text-slate-400 text-sm mb-6 leading-snug">Relational database design, query optimization, and data modeling.</p>
+<div class="w-full bg-primary/10 h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full shadow-neon w-[82%]"></div>
+</div>
+</div>
+<!-- Supplementary Skill: JavaScript -->
+<div class="skill-card bg-background-dark p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-2 text-[10px] text-primary/30 font-mono">0x4A_0x53</div>
+<div class="mb-6 flex items-center justify-between">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center border border-primary/30 group-hover:bg-primary/20 group-hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-3xl">javascript</span>
+</div>
+<div class="text-right">
+<div class="text-primary text-xs font-bold uppercase tracking-tighter">Mastery</div>
+<div class="text-xl font-bold">87%</div>
+</div>
+</div>
+<h3 class="text-xl font-bold mb-2 uppercase tracking-tight">JavaScript</h3>
+<p class="text-slate-400 text-sm mb-6 leading-snug">Modern ES6+ syntax, asynchronous patterns, and frontend frameworks.</p>
+<div class="w-full bg-primary/10 h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full shadow-neon w-[87%]"></div>
+</div>
+</div>
+<!-- Supplementary Skill: Docker -->
+<div class="skill-card bg-background-dark p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-2 text-[10px] text-primary/30 font-mono">0x44_0x4B</div>
+<div class="mb-6 flex items-center justify-between">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center border border-primary/30 group-hover:bg-primary/20 group-hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-3xl">box</span>
+</div>
+<div class="text-right">
+<div class="text-primary text-xs font-bold uppercase tracking-tighter">Mastery</div>
+<div class="text-xl font-bold">75%</div>
+</div>
+</div>
+<h3 class="text-xl font-bold mb-2 uppercase tracking-tight">Containers</h3>
+<p class="text-slate-400 text-sm mb-6 leading-snug">Containerization, orchestration with Docker, and environment isolation.</p>
+<div class="w-full bg-primary/10 h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full shadow-neon w-[75%]"></div>
+</div>
+</div>
+</div>
+<!-- Proficiency Metrics Banner -->
+<div class="mt-20 border border-primary/30 bg-primary/5 p-8 rounded-sm relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary shadow-neon"></div>
+<div class="flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex-1 space-y-2">
+<h3 class="text-2xl font-bold uppercase tracking-tighter">Diagnostic_Summary</h3>
+<p class="text-slate-400 text-sm">Combined system proficiency rating based on 5+ years of production experience and 200+ deployments. Hardware level optimization enabled.</p>
+</div>
+<div class="flex gap-12">
+<div class="text-center">
+<div class="text-primary text-4xl font-black">200+</div>
+<div class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1">Deployments</div>
+</div>
+<div class="text-center">
+<div class="text-primary text-4xl font-black">50k+</div>
+<div class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1">LOC_Daily</div>
+</div>
+<div class="text-center">
+<div class="text-primary text-4xl font-black">12</div>
+<div class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1">Core_Techs</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Status Bar -->
+<footer class="bg-background-dark border-t border-primary/20 px-6 py-4">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-[10px] font-bold tracking-[0.2em] uppercase text-primary/60">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary shadow-neon animate-pulse"></span>
+<span>System_Online</span>
+</div>
+<span class="text-primary/20">|</span>
+<span>Location: Remote_Global</span>
+<span class="text-primary/20">|</span>
+<span id="timestamp">UTC_OFFSET: +00:00</span>
+</div>
+<div class="mt-4 md:mt-0">
+                © 2024 DEV_PORTFOLIO // ALL_RIGHTS_RESERVED
+            </div>
+</div>
+</footer>
+</body></html>
