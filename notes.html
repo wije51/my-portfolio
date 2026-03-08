@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<!--
+    Dev_Protocol | Knowledge Database (Notes)
+    Purpose : Logs continuous learning in C#, Kali Linux, and Japanese using an interactive card/modal grid.
+-->
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Knowledge Database | Dev_Protocol</title>
+    <meta name="description"
+        content="Continuous learning logs of Janith Charuka covering C#, Kali Linux, and Japanese." />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#26ed26",
+                        "background-dark": "#0a0a0c",
+                        "surface-dark": "#111114",
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for modal content */
+        .modal-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-scroll::-webkit-scrollbar-track {
+            background: rgba(38, 237, 38, 0.05);
+        }
+
+        .modal-scroll::-webkit-scrollbar-thumb {
+            background: rgba(38, 237, 38, 0.3);
+            border-radius: 4px;
+        }
+
+        .modal-scroll::-webkit-scrollbar-thumb:hover {
+            background: rgba(38, 237, 38, 0.6);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-dark text-slate-100 antialiased overflow-x-hidden selection:bg-primary selection:text-background-dark grid-bg relative">
+
+    <!-- Shared Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-background-dark/80 backdrop-blur-md border-b border-primary/30 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <div class="flex items-center gap-2 group cursor-pointer" onclick="window.location.href='index.html'">
+                <span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+                <span class="text-xl font-bold tracking-tighter text-slate-100 uppercase italic">Dev_Protocol</span>
+            </div>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="education.html">Education</a>
+                <a class="nav-link" href="projects.html">Projects</a>
+                <a class="nav-link" href="skills.html">Skills</a>
+                <a class="nav-link active" href="notes.html">Notes</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </div>
+            <a href="https://wa.me/94721450572?text=Hello%20Janith,%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20working%20with%20you!"
+                target="_blank" rel="noopener noreferrer"
+                class="bg-primary hover:bg-primary/90 text-background-dark px-6 py-2 text-xs font-bold uppercase tracking-tighter rounded-sm transition-all active:scale-95 neon-border inline-block">
+                Hire Me
+            </a>
+        </div>
+    </nav>
+
+    <!-- MAIN SECTION: KNOWLEDGE ARCHIVE -->
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+
+        <!-- Archive Header -->
+        <div class="mb-16 border-l-4 border-primary pl-6">
+            <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-2 uppercase">Sys_Logs</h1>
+            <div class="flex items-center gap-4 text-primary/60 font-mono text-sm tracking-[0.2em]">
+                <span>KNOWLEDGE_DATABASE.BIN</span>
+                <span class="h-px flex-1 bg-primary/20"></span>
+                <span class="text-primary flex items-center gap-2">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                    </span>
+                    SYNCING
+                </span>
+            </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div id="filter-bar" class="mb-12 flex flex-wrap gap-4 border-b border-primary/10 pb-6">
+            <button data-filter="all"
+                class="filter-btn active-filter px-6 py-2 border border-primary bg-primary text-background-dark font-bold text-xs tracking-widest rounded-sm transition-all">ALL_NOTES</button>
+            <button data-filter="csharp"
+                class="filter-btn px-6 py-2 border border-primary/30 text-primary/60 hover:text-primary hover:border-primary font-bold text-xs tracking-widest rounded-sm transition-all">C#_LOGS</button>
+            <button data-filter="linux"
+                class="filter-btn px-6 py-2 border border-primary/30 text-primary/60 hover:text-primary hover:border-primary font-bold text-xs tracking-widest rounded-sm transition-all">LINUX_&_SEC</button>
+            <button data-filter="japanese"
+                class="filter-btn px-6 py-2 border border-primary/30 text-primary/60 hover:text-primary hover:border-primary font-bold text-xs tracking-widest rounded-sm transition-all">JAPANESE</button>
+        </div>
+
+        <!-- Notes Card Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- NOTE CARD: C# -->
+            <div data-category="csharp"
+                class="note-card bg-primary/5 p-1 rounded-sm overflow-hidden flex flex-col neon-border cyber-card relative group">
+                <div class="absolute top-0 right-0 p-3 text-[10px] text-primary/50 font-mono tracking-widest">ID: 0x4353
+                </div>
+
+                <div class="p-8 flex-1 flex flex-col">
+                    <span
+                        class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">terminal</span>
+                    <h3 class="text-2xl font-bold tracking-tight text-white mb-2 uppercase">C# Async Patterns</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8 flex-1">
+                        Breaking down `async/await` behavior, SynchronizationContext overrides, and preventing deadlocks
+                        in enterprise web APIs.
+                    </p>
+                    <button onclick="openModal('modal_csharp')"
+                        class="w-full bg-transparent border border-primary/50 text-primary py-3 font-black text-sm tracking-widest uppercase hover:bg-primary hover:text-background-dark transition-all neon-border flex items-center justify-center gap-2 group/btn">
+                        <span>View Note</span>
+                        <span
+                            class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">read_more</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- NOTE CARD: Linux/Security -->
+            <div data-category="linux"
+                class="note-card bg-primary/5 p-1 rounded-sm overflow-hidden flex flex-col neon-border cyber-card relative group">
+                <div class="absolute top-0 right-0 p-3 text-[10px] text-primary/50 font-mono tracking-widest">ID: 0x4B4C
+                </div>
+
+                <div class="p-8 flex-1 flex flex-col">
+                    <span
+                        class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">security</span>
+                    <h3 class="text-2xl font-bold tracking-tight text-white mb-2 uppercase">Kali Linux Init</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8 flex-1">
+                        Initial environment setup, basic network mapping with Nmap, and defensive security logging
+                        considerations.
+                    </p>
+                    <button onclick="openModal('modal_linux')"
+                        class="w-full bg-transparent border border-primary/50 text-primary py-3 font-black text-sm tracking-widest uppercase hover:bg-primary hover:text-background-dark transition-all neon-border flex items-center justify-center gap-2 group/btn">
+                        <span>View Note</span>
+                        <span
+                            class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">read_more</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- NOTE CARD: Japanese -->
+            <div data-category="japanese"
+                class="note-card bg-primary/5 p-1 rounded-sm overflow-hidden flex flex-col neon-border cyber-card relative group">
+                <div class="absolute top-0 right-0 p-3 text-[10px] text-primary/50 font-mono tracking-widest">ID: 0x4A50
+                </div>
+
+                <div class="p-8 flex-1 flex flex-col">
+                    <span
+                        class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">language</span>
+                    <h3 class="text-2xl font-bold tracking-tight text-white mb-2 uppercase">Japanese Learning</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8 flex-1">
+                        Tracking core linguistic acquisition, syntax mapping, and learning Hiragana & Katakana
+                        structures.
+                    </p>
+                    <button onclick="openModal('modal_japanese')"
+                        class="w-full bg-transparent border border-primary/50 text-primary py-3 font-black text-sm tracking-widest uppercase hover:bg-primary hover:text-background-dark transition-all neon-border flex items-center justify-center gap-2 group/btn">
+                        <span>View Note</span>
+                        <span
+                            class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">read_more</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-background-dark py-12 border-t border-slate-900 mt-20">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-slate-500 text-xs font-mono mb-4">SYSTEM_FOOTER // VERSION 1.0.5</p>
+            <p class="text-slate-400 text-sm">© 2024 Dev_Protocol. All Rights Reserved. Stay creative.</p>
+        </div>
+    </footer>
+
+    <!-- ==================== MODALS ==================== -->
+    <div id="modal_overlay"
+        class="fixed inset-0 bg-background-dark/90 backdrop-blur-sm z-[100] hidden items-center justify-center p-4 md:p-10 transition-opacity opacity-0">
+
+        <!-- Modal: C# -->
+        <div id="modal_csharp"
+            class="modal-content hidden w-full max-w-4xl bg-surface-dark border border-primary/30 neon-border rounded-sm flex flex-col max-h-[90vh]">
+            <div class="p-4 border-b border-primary/20 flex justify-between items-center bg-primary/5">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary">terminal</span>
+                    <span
+                        class="font-mono text-primary font-bold uppercase tracking-widest text-sm">ARCHIVE_C#_ASYNC</span>
+                </div>
+                <button onclick="closeModals()" class="text-slate-500 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="p-8 overflow-y-auto modal-scroll space-y-6 text-slate-300">
+                <h2 class="text-3xl font-black uppercase tracking-tighter text-white mb-6">C# Asynchronous Programming
+                </h2>
+                <p>Exploring deep concepts in <span class="text-primary">async/await</span> behavior to prevent
+                    deadlocks in enterprise web APIs.</p>
+                <p><strong>Focus:</strong> Understanding SynchronizationContext and why `ConfigureAwait(false)` is
+                    crucial in library code but shouldn't always be used in UI layers.</p>
+
+                <div class="bg-black/50 p-4 rounded border border-primary/20 font-mono text-sm">
+                    <pre><code class="text-slate-400"><span class="text-blue-400">public</span> <span class="text-blue-400">async</span> Task&lt;Data&gt; GetDataAsync() {
+    <span class="text-slate-600">// Avoid deadlocks by leaving the synchronization context</span>
+    <span class="text-blue-400">return</span> <span class="text-blue-400">await</span> _repo.FetchAsync().ConfigureAwait(<span class="text-blue-400">false</span>);
+}</code></pre>
+                </div>
+
+                <hr class="border-primary/10">
+                <p class="text-sm text-slate-500 font-mono tracking-widest text-right">TIMESTAMP: PRESENT // STATUS:
+                    ONGOING</p>
+            </div>
+        </div>
+
+        <!-- Modal: Linux -->
+        <div id="modal_linux"
+            class="modal-content hidden w-full max-w-4xl bg-surface-dark border border-primary/30 neon-border rounded-sm flex flex-col max-h-[90vh]">
+            <div class="p-4 border-b border-primary/20 flex justify-between items-center bg-primary/5">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary">security</span>
+                    <span
+                        class="font-mono text-primary font-bold uppercase tracking-widest text-sm">ARCHIVE_LINUX_SEC</span>
+                </div>
+                <button onclick="closeModals()" class="text-slate-500 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="p-8 overflow-y-auto modal-scroll space-y-6 text-slate-300">
+                <h2 class="text-3xl font-black uppercase tracking-tighter text-white mb-6">Kali Linux & Security Basics
+                </h2>
+                <p>Initialized primary virtual environment running Kali Linux.</p>
+                <p><strong>Objective:</strong> Understand network vulnerabilities and penetration testing from a
+                    defensive perspective to write more secure applications.</p>
+                <ul class="list-disc list-inside space-y-2 text-slate-400">
+                    <li>Command Line Navigation via Bash</li>
+                    <li>Permissions and Ownership (`chmod` / `chown`)</li>
+                    <li>Basic usage of Nmap for rapid network mapping</li>
+                </ul>
+                <div class="bg-black/50 p-4 rounded border border-primary/20 font-mono text-sm mt-4">
+                    <p class="text-primary">> sudo nmap -sS -p- 192.168.1.X</p>
+                </div>
+
+                <hr class="border-primary/10">
+                <p class="text-sm text-slate-500 font-mono tracking-widest text-right">TIMESTAMP: PRESENT // STATUS:
+                    ONGOING</p>
+            </div>
+        </div>
+
+        <!-- Modal: Japanese -->
+        <div id="modal_japanese"
+            class="modal-content hidden w-full max-w-4xl bg-surface-dark border border-primary/30 neon-border rounded-sm flex flex-col max-h-[90vh]">
+            <div class="p-4 border-b border-primary/20 flex justify-between items-center bg-primary/5">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary">language</span>
+                    <span
+                        class="font-mono text-primary font-bold uppercase tracking-widest text-sm">ARCHIVE_JAPANESE</span>
+                </div>
+                <button onclick="closeModals()" class="text-slate-500 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="p-8 overflow-y-auto modal-scroll space-y-6 text-slate-300">
+                <h2 class="text-3xl font-black uppercase tracking-tighter text-white mb-6">Nihongo (Japanese)
+                    Acquisition</h2>
+                <p>Began language acquisition protocol: <span class="text-white font-bold">Japanese</span>.</p>
+                <p><strong>Motivation:</strong> Expanding communication arrays and exploring the technology culture
+                    originating from Japan.</p>
+                <p><strong>Current Directives:</strong></p>
+                <ul class="list-disc list-inside space-y-2 text-slate-400">
+                    <li>Mastering Hiragana and Katakana character sets</li>
+                    <li>Basic Sentence Structure (Subject-Object-Verb)</li>
+                    <li>Common greeting phrases and vocabulary</li>
+                </ul>
+                <div class="bg-black/50 p-4 rounded border border-primary/20 font-mono text-sm mt-4">
+                    <p class="text-primary">> System.Console.WriteLine("こんにちは世界");</p>
+                    <p class="text-slate-500">// Output: Konnichiwa Sekai (Hello World)</p>
+                </div>
+
+                <hr class="border-primary/10">
+                <p class="text-sm text-slate-500 font-mono tracking-widest text-right">TIMESTAMP: PRESENT // STATUS:
+                    ONGOING</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JavaScript For Filtering and Modals -->
+    <script>
+        // Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.note-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active-filter', 'bg-primary', 'text-background-dark', 'border-primary');
+                    b.classList.add('text-primary/60', 'border-primary/30');
+                });
+                btn.classList.add('active-filter', 'bg-primary', 'text-background-dark', 'border-primary');
+                btn.classList.remove('text-primary/60', 'border-primary/30');
+
+                const filter = btn.dataset.filter;
+
+                cards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Modal Logic
+        const modalOverlay = document.getElementById('modal_overlay');
+        const modalContents = document.querySelectorAll('.modal-content');
+
+        function openModal(modalId) {
+            // Hide all modal contents first
+            modalContents.forEach(content => content.classList.add('hidden'));
+
+            // Show overlay and specific content
+            modalOverlay.classList.remove('hidden');
+            document.getElementById(modalId).classList.remove('hidden');
+
+            // Fade-in effect via tiny timeout to allow display logic
+            setTimeout(() => {
+                modalOverlay.classList.remove('opacity-0');
+            }, 10);
+
+            // Prevent body scrolling
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModals() {
+            modalOverlay.classList.add('opacity-0');
+
+            // Wait for fade transition, then hide
+            setTimeout(() => {
+                modalOverlay.classList.add('hidden');
+                modalContents.forEach(content => content.classList.add('hidden'));
+            }, 300); // 300ms matches default Tailwind transition
+
+            // Restore body scrolling
+            document.body.style.overflow = '';
+        }
+
+        // Close when clicking outside content area
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeModals();
+            }
+        });
+    </script>
+</body>
+
+</html>
