@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wijet\\Downloads\\Portfolio\\Server.csproj": {}
+    "C:\\Users\\wijet\\.gemini\\antigravity\\scratch\\my-portfolio\\Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wijet\\Downloads\\Portfolio\\Server.csproj": {
+    "C:\\Users\\wijet\\.gemini\\antigravity\\scratch\\my-portfolio\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wijet\\Downloads\\Portfolio\\Server.csproj",
+        "projectUniqueName": "C:\\Users\\wijet\\.gemini\\antigravity\\scratch\\my-portfolio\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "C:\\Users\\wijet\\Downloads\\Portfolio\\Server.csproj",
+        "projectPath": "C:\\Users\\wijet\\.gemini\\antigravity\\scratch\\my-portfolio\\Server.csproj",
         "packagesPath": "C:\\Users\\wijet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wijet\\Downloads\\Portfolio\\obj\\",
+        "outputPath": "C:\\Users\\wijet\\.gemini\\antigravity\\scratch\\my-portfolio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
